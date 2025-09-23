@@ -1,0 +1,33 @@
+# OSX
+.DS_Store
+
+# Gradle files
+.gradle/
+build/
+
+# Kotlin
+.kotlin/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
+
+# IntelliJ
+*.iml
+**/.idea/*
+!**/.idea/externalDependencies.xml
+!**/.idea/codeStyles/
+!**/.idea/inspectionProfiles/
+!**/.idea/scopes/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
