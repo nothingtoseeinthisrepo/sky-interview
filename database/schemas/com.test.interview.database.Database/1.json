@@ -1,0 +1,97 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "fa922c2231ae065d4d1b29232cae2a30",
+    "entities": [
+      {
+        "tableName": "pokemon",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `number` INTEGER NOT NULL, `imageUrl` TEXT NOT NULL, `hpStat` INTEGER, `attackStat` INTEGER, `defenseStat` INTEGER, `specialAttackStat` INTEGER, `specialDefenseStat` INTEGER, `speedStat` INTEGER, `weight` REAL NOT NULL, `height` INTEGER NOT NULL, `types` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "number",
+            "columnName": "number",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hpStat",
+            "columnName": "hpStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "attackStat",
+            "columnName": "attackStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "defenseStat",
+            "columnName": "defenseStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "specialAttackStat",
+            "columnName": "specialAttackStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "specialDefenseStat",
+            "columnName": "specialDefenseStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "speedStat",
+            "columnName": "speedStat",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "height",
+            "columnName": "height",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "types",
+            "columnName": "types",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fa922c2231ae065d4d1b29232cae2a30')"
+    ]
+  }
+}
