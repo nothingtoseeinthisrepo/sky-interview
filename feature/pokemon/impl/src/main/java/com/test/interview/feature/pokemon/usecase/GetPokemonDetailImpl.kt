@@ -13,7 +13,7 @@ import javax.inject.Singleton
 internal class GetPokemonDetailImpl @Inject constructor(
     private val pokemonRepository: PokemonRepository,
 ) : GetPokemonDetail {
-    override fun invoke(pokemonId: String): Flow<Pokemon> {
+    override fun invoke(pokemonId: Int): Flow<Pokemon> {
         return pokemonRepository.getDetail(pokemonId)
     }
 }

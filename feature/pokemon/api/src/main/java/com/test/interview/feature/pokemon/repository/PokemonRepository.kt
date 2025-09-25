@@ -5,5 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface PokemonRepository {
     fun get(count: Int): Flow<List<Pokemon>>
-    fun getDetail(pokemonId: String): Flow<Pokemon>
+    fun getDetail(pokemonId: Int): Flow<Pokemon>
 }

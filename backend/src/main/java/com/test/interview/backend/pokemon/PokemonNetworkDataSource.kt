@@ -11,4 +11,8 @@ class PokemonNetworkDataSource @Inject constructor(
             api.getPokemon(id)
         }
     }
+
+    suspend fun getPokemonDetail(id: Int): PokemonDto {
+        return api.getPokemon(id)
+    }
 }

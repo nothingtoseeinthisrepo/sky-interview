@@ -21,6 +21,7 @@ import com.test.interview.feature.list.databinding.ListItemPokemonBinding
 import com.test.interview.feature.pokemon.model.Pokemon
 import com.test.interview.feature.pokemon.ui.backgroundColor
 import com.test.interview.feature.pokemon.ui.highlightColor
+import com.test.interview.feature.pokemon.ui.R as UiR
 
 @Composable
 fun PokemonListItem(
@@ -54,7 +55,7 @@ class PokemonListItemView @JvmOverloads constructor(
     fun setPokemon(pokemon: Pokemon, onClick: (Pokemon) -> Unit) {
         binding.pokemonNameText.text = pokemon.name
         binding.pokemonImage.load(pokemon.imageUrl) {
-            error(R.drawable.missingno)
+            error(UiR.drawable.missingno)
         }
 
         pokemon.types.forEachIndexed { index, type ->

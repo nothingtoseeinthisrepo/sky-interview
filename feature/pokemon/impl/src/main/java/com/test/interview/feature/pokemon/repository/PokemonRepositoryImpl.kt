@@ -30,8 +30,8 @@ internal class PokemonRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getDetail(pokemonId: String): Flow<Pokemon> {
-        return emptyFlow()
+    override fun getDetail(pokemonId: Int): Flow<Pokemon> {
+        return flow { emit(pokemonNetworkDataSource.getPokemonDetail(pokemonId).toEntity().toDomain()) }
     }
 }
 
