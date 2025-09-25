@@ -49,7 +49,7 @@ internal class PokemonRepositoryImpl @Inject constructor(
     }
 
     override fun get(pokemonId: String): Flow<Pokemon> {
-        return emptyFlow()
+        return flow { emit(pokemonNetworkDataSource.getPokemon(pokemonId).toEntity(0).toDomain()) }
     }
 }
 

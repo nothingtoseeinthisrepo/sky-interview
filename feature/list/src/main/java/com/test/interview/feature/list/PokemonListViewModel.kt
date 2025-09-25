@@ -26,7 +26,7 @@ class PokemonListViewModel @Inject constructor(
 
     private var context: Context? = null
 
-    val uiState: StateFlow<PokemonListState> = getPokemons(count = 20)
+    val uiState: StateFlow<PokemonListState> = getPokemons(count = 50)
         .map { PokemonListState(title = context?.resources?.getString(R.string.list_title).orEmpty(), pokemons = it) }
         .stateIn(
             scope = viewModelScope,
