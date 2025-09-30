@@ -17,6 +17,28 @@ android {
         version = release(36)
     }
 
+    productFlavors {
+        flavorDimensions += listOf("store", "environment")
+
+        //region Store
+        register("google") {
+            dimension = "store"
+        }
+        register("amazon") {
+            dimension = "store"
+        }
+        //endregion
+
+        //region Environment
+        register("production") {
+            dimension = "environment"
+        }
+        register("stage") {
+            dimension = "environment"
+        }
+        //endregion
+    }
+
     defaultConfig {
         applicationId = "com.test.interview"
         minSdk = 24
@@ -78,4 +100,10 @@ dependencies {
     implementation(projects.feature.list)
     implementation(projects.feature.pokemon.api)
     implementation(projects.feature.pokemon.impl)
+
+
+    implementation(projects.feature.store)
+    implementation(projects.feature.store.api)
+    implementation(projects.feature.store.amazon)
+    implementation(projects.feature.store.google)
 }
