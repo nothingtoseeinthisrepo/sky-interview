@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.coil.network)
 
     implementation(projects.feature.pokemon.api)
+    implementation(projects.feature.pokemon.ui)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
